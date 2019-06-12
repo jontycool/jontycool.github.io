@@ -14,7 +14,6 @@ body {
 .brand{
     animation-name: fadeIn;
     animation-duration: 1.1s;
-    display: 
 }
 .brand .h1-seo{
 	position: relative;
@@ -149,18 +148,9 @@ body {
 
 .box {
     background-color: #444;
-    padding: 120px;
+    padding: 20px;
     margin: 20px;
 }
-
-.box1 {
-    background-image: url(rest.jpg);
-    padding: 120px;
-    margin: 20px;
-    font-family: Arial;
-    color: red !important;
-}
-
 .zone {
     /*padding:30px 50px;
     margin:40px 60px;*/
@@ -173,9 +163,22 @@ body {
     transition: all 0.3s linear;
 }
 
+.box1 {
+    background-image: url(rest.jpg);
+    padding: 20px;
+    margin: 10px; 
+    font-family: Arial;
+}
+
 .zone:hover {
     -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
+
+.page-header-image {
+	background-image: url(top_img.jpg);
+	background-size: cover;
+}
+
