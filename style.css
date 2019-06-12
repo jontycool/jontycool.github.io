@@ -41,7 +41,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	font-size: 1.5em;
 	text-shadow: 1px 1px #121214;
 	color: #fff
@@ -65,8 +65,9 @@
 }
 
 .activityTag {
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 	font-family: 'Montserrat', sans-serif;
 	margin: 20px;
 	font-size: 2em;
@@ -74,8 +75,9 @@
 }
 
 .resortTag {
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 	font-family: 'Montserrat', sans-serif;
 	margin: 20px;
 	font-size: 2em;
@@ -113,4 +115,63 @@
 
 .copyright {
 	border-right: 2em;
+}
+
+.descTitle {
+	/*display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 20px;*/
+	font-size: 2.5em !important;
+}
+
+.descriptionTitle {
+	display: grid;
+	grid-gap: 5px;
+	/*grid-template-rows: 1fr 1fr;*/
+	font-size: 0.8em;
+}
+
+@media only screen and (max-width: 700px) {
+    .descTitle2{
+        font-size: 0.5em;
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
+}
+
+.box > img {
+    width: 100%;
+}
+
+.box {
+    background-color: #444;
+    padding: 120px;
+    margin: 20px;
+}
+
+.box1 {
+    background-image: url(rest.jpg);
+    padding: 120px;
+    margin: 20px;
+    font-family: Arial;
+    color: red !important;
+}
+
+.zone {
+    /*padding:30px 50px;
+    margin:40px 60px;*/
+    cursor:pointer;
+    /*display:inline-block;*/
+    color:#FFF;
+    font-size:1em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+
+.zone:hover {
+    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 }
