@@ -11,6 +11,9 @@
     ></script>
   </head>
   <body>
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
     <div class="header">
       <h1 class="ml1">
         <span class="text-wrapper">
@@ -91,6 +94,15 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <script>
+      var overlay = document.getElementById('preloader');
+
+      window.addEventListener('load', function () {
+        overlay.style.display = 'none';
+      });
+    </script>
+
     <script>
       var textWrapper = document.querySelector('.ml1 .letters');
       textWrapper.innerHTML = textWrapper.textContent.replace(
