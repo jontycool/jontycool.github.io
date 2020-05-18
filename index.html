@@ -3,98 +3,925 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Tathagat's Portfolio</title>
-    <link rel="stylesheet" href="index.css" />
+    <meta name="description" content="Tathagat Mohanty" />
+    <meta name="author" content="tathagat.mohanty95@gmail.com" />
+    <meta
+      name="keyword"
+      content="tathagat mohanty, mohanty tathagat, tathagat, mohanty, ui developer, ui, bootstrap, bootstrap development, react development, react, reactjs, redux development, reduxjs, jonty, jonty.cool, jontycool, Tathagat's portfolio, frontend developer, frontend, tathagat.mohanty95, tathagat.mohanty"
+    />
+
+    <link rel="shortcut icon" href="./media/myIcon.ico" />
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/aos.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
     <script
       src="https://kit.fontawesome.com/ab9588bd05.js"
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar" data-offset="55">
     <div id="preloader">
       <div class="spinner"></div>
     </div>
-    <div class="header">
-      <h1 class="ml1">
-        <span class="text-wrapper">
-          <span class="line line1"></span>
-          <span class="letters">Coming Soon</span>
-          <span class="line line2"></span>
-        </span>
-      </h1>
-    </div>
 
-    <div class="svg_box" id="test">
-      <svg
-        version="1.1"
-        id="loader-1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        x="0px"
-        y="0px"
-        width="260px"
-        height="260px"
-        viewBox="0 0 40 40"
-        xml:space="preserve"
+    <!-- ----------NAVBAR---------- -->
+    <nav
+      class="navbar navbar-expand-md fixed-top navbar-default navbar-dark"
+      id="navbarContainer"
+    >
+      <a class="navbar-brand" href="#top">Tathagat</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarContent"
+        aria-label="Toggle Navigation"
+        aria-controls="navbar supported content"
+        aria-expanded="false"
       >
-        <path
-          id=""
-          opacity="0"
-          fill="transparent"
-          d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946 s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z"
-        />
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <path
-          id="orbit"
-          d="m20.201,15.91701c-9.20089,0 -16.6606,3.28421 -16.6606,7.335c0,4.05128 7.4597,7.335 16.6606,7.335s16.6606,-3.28372 16.6606,-7.335c-0.00111,-4.05079 -7.4597,-7.335 -16.6606,-7.335z"
-          stroke-opacity="0"
-          stroke-width=".1"
-          stroke="transparent"
-          fill="transparent"
-        />
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarContent"
+      >
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link active" href="#homeSection">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutSection">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#workSection">Work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skillsSection">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#timeLineSection">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resumeSection">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contactMe">Contact</a>
+          </li>
 
-        <circle id="mun" cx="" cy="" r="1" fill="#fff">
-          <animatemotion id="animation" dur="2s" repeatCount="indefinite">
-            <mpath xlink:href="#orbit"></mpath>
-          </animatemotion>
-        </circle>
+          <li>
+            <button class="btn btn-dark" id="myBtn" onclick="myFunction()">
+              Pause
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-        <circle cx="20" cy="20" r="5" fill="#3498db"></circle>
-      </svg>
-    </div>
-    <div class="footerText">
-      <p>
-        This Website will be ready within the next few days. I am trying some
-        major revamp to my very old and dated Portfolio Website. For any urgent
-        queries reachout to me on my social media handles.
-      </p>
-      <div class="footerLinks">
-        <a href="mailto:tathagat.mohanty95@gmail.com" target="_blank">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/mrmohanty" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://https://github.com/jontycool" target="_blank">
-          <i class="fab fa-github-alt"></i>
-        </a>
-        <a href="https://www.twitter.com/tathagatmohant1" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
+    <!-- ----------Content---------- -->
+
+    <div class="homeSection" id="homeSection">
+      <div class="video-container">
+        <video autoplay loop id="bgVideo" poster="./media/bgVideoPoster.png">
+          <source src="./media/bgVideo.mp4" type="video/mp4" />
+        </video>
+        <div class="banner">
+          <div class="actualText">
+            <h1>Hi There !</h1>
+            <h1>I am <span class="typedText"></span></h1>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="footer">
-      <div class="copyright">
-        &copy;
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-        Developed By Tathagat Mohanty
+
+    <div class="aboutSection mb-4" id="aboutSection">
+      <div class="container p-3">
+        <div class="row text-center">
+          <div class="col mb-3 spacerClass">
+            <h1
+              data-aos="fade-down"
+              data-aos-delay="50"
+              data-aos-duration="2000"
+            >
+              About Me
+            </h1>
+            <hr />
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col-sm-6 p-2 text-center"
+            data-aos="fade-right"
+            data-aos-delay="50"
+            data-aos-duration="2000"
+          >
+            <img
+              src="./media/img/myPhoto.jpg"
+              height="300"
+              width="300"
+              alt="Tathagat Mohanty"
+              style="
+                -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+              "
+            />
+          </div>
+          <div
+            class="col-sm-6 text-center"
+            data-aos="fade-left"
+            data-aos-delay="50"
+            data-aos-duration="2000"
+          >
+            <h4 class="mt-3">
+              Hello this is Tathagat Mohanty. I am a Web Developer by profession
+              with 2+ years of experience in this fast paced IT Industry.
+            </h4>
+            <h5 class="text-muted mt-3">
+              I am an astute learner skilled in FrontEnd Technologies. I believe
+              Design is something which is very personal and individual. With
+              that in mind I try to develop websites for multiple types of end
+              users with an approachable and clean design.
+            </h5>
+          </div>
+        </div>
       </div>
     </div>
 
+    <div class="quote1">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="textContainer">
+              <blockquote
+                class="blockquote text-center"
+                style="color: #f4f4f4 !important;"
+                data-aos="fade-down"
+                data-aos-delay="50"
+                data-aos-duration="1500"
+              >
+                <p class="mb-1">
+                  <strong>
+                    "Programming isn't about what you know; it's about what you
+                    can figure out.”
+                  </strong>
+                </p>
+                <footer
+                  class="blockquote-footer"
+                  data-aos="fade-up"
+                  data-aos-delay="80"
+                  data-aos-duration="2000"
+                >
+                  <cite title="Source Title">Chris Pine</cite>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="serviceSection pt-5" id="workSection">
+      <div class="container-fluid">
+        <div class="row text-center" style="width: 100%;">
+          <div class="col-12 mt-5 mb-3">
+            <h1
+              data-aos="fade-down"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+              style="color: white;"
+            >
+              What I Offer
+            </h1>
+            <hr />
+          </div>
+        </div>
+        <div class="row serviceRow py-5">
+          <div
+            class="col-sm-5 col-md-3 serviceBlock m-3 hover1"
+            data-aos="zoom-in"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <div class="serviceContainer text-center mt-5">
+              <span>
+                <i class="fas fa-lightbulb fa-3x"></i>
+              </span>
+              <h3 class="p-2">UNIQUE IDEAS</h3>
+              <p>
+                Creative in nature and always eager to implement new things in
+                my design to improve User Experience. Highly passionate in
+                developing stunning webpages and enjoy bringing ideas to life in
+                the browser.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-sm-5 col-md-3 serviceBlock m-3 hover2"
+            data-aos="zoom-in"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <div class="serviceContainer text-center mt-5">
+              <span>
+                <i class="fas fa-tachometer-alt fa-3x"></i>
+              </span>
+              <h3 class="p-2">Fast & Intuitive</h3>
+              <p>
+                Fast load times and lag free interaction are my highest
+                priority. Strong preference for easy to use, intuitive UX/UI.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-sm-5 col-md-3 serviceBlock m-3 hover3"
+            data-aos="zoom-in"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <div class="serviceContainer text-center mt-5">
+              <span>
+                <i class="fas fa-mobile-alt fa-3x"></i>
+              </span>
+              <h3 class="p-2">RESPONSIVE DESIGN</h3>
+              <p>
+                Creating a website that looks and feels amazing on all kinds of
+                devices. With a Mobile-First approach all my webpages will run
+                as expected on devices of any screen size.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-sm-5 col-md-3 serviceBlock m-3 hover4"
+            data-aos="zoom-in"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <div class="serviceContainer text-center mt-5">
+              <span>
+                <i class="fas fa-hammer fa-3x"></i>
+              </span>
+              <h3 class="p-2">MODULARITY</h3>
+              <p>
+                Code Modularity is one of my top priority hence making it easy
+                to add features later as required.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-sm-5 col-md-3 serviceBlock m-3 hover5"
+            data-aos="zoom-in"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <div class="serviceContainer text-center mt-5">
+              <span>
+                <i class="fas fa-pencil-ruler fa-3x"></i>
+              </span>
+              <h3 class="p-2">QUICK LEARNER</h3>
+              <p>
+                Skilled in HTML, CSS, Bootstrap, Javascript, ReactJS, Redux etc.
+                Open to use new libraries and frameworks for any project as per
+                requirement.
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-sm-5 col-md-3 serviceBlock m-3 hover6"
+            data-aos="zoom-in"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <div class="serviceContainer text-center mt-5">
+              <span>
+                <i class="fas fa-clock fa-3x"></i>
+              </span>
+              <h3 class="p-2">DEPENDABLE</h3>
+              <p>
+                I take my work very seriously and strive to deliver on or before
+                the agreed timeline. I highly value time in my personal life as
+                well.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acheivementSection">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col text-center my-4"
+            style="border-right: solid 1px; text-shadow: 2px 2px 4px #000;"
+          >
+            <span class="counter">5</span>
+            <h4>Projects</h4>
+          </div>
+          <div
+            class="col text-center my-4"
+            style="border-right: solid 1px; text-shadow: 2px 2px 4px #000;"
+          >
+            <span class="counter">2</span>
+            <h4>Awards</h4>
+          </div>
+          <div
+            class="col text-center my-4"
+            style="text-shadow: 2px 2px 4px #000;"
+          >
+            <span class="counter">2.5</span><span>yrs</span>
+            <h4>Experience</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skillSection p-5" id="skillsSection">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-12 mt-5 mb-1">
+            <h1
+              data-aos="fade-down"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+            >
+              My Skills
+            </h1>
+            <hr />
+          </div>
+        </div>
+        <div
+          class="row py-3"
+          style="
+            background-image: linear-gradient(
+              to right,
+              #333333,
+              #333,
+              #333,
+              #9e265e,
+              #e60000,
+              #e60000,
+              #e60000,
+              #c60048,
+              #9e265e,
+              #333,
+              #333333,
+              #333333
+            );
+          "
+        >
+          <div class="col-12 mb-5">
+            <div class="animateText text-center" style="color: white;">
+              <h1 class="ml4 align-self-start">
+                <span class="letters letters-1">HTML</span>
+                <span class="letters letters-2">CSS</span>
+                <span class="letters letters-3">Bootstrap</span>
+                <span class="letters letters-4">MaterialUI</span>
+                <span class="letters letters-5">JavaScript</span>
+                <span class="letters letters-6">ReactJS</span>
+                <span class="letters letters-7">Redux</span>
+                <span class="letters letters-8">AJAX</span>
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="row p-1">
+          <div
+            class="col-xs-6 col-sm-3 p-3 text-center"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <img src="./media/img/html.png" height="150px" alt="html" />
+            <h4>HTML</h4>
+          </div>
+          <div
+            class="col-xs-6 col-sm-3 p-3 text-center"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <img src="./media/img/css.png" height="150px" alt="css" />
+            <h4>CSS</h4>
+          </div>
+          <div
+            class="col-xs-6 col-sm-3 p-3 text-center"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <img
+              src="./media/img/bootstrap.png"
+              height="150px"
+              alt="bootstrap"
+            />
+            <h4>Bootstrap</h4>
+          </div>
+          <div
+            class="col-xs-6 col-sm-3 p-3 text-center"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <img
+              src="./media/img/material.png"
+              height="150px"
+              alt="materialUI"
+            />
+            <h4>Materialize CSS</h4>
+          </div>
+          <div
+            class="col-xs-6 col-sm-3 p-3 text-center"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <img
+              src="./media/img/javascript.png"
+              height="150px"
+              alt="javascript"
+            />
+            <h4>Javascript</h4>
+          </div>
+          <div
+            class="col-xs-6 col-sm-3 p-3 text-center"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <img src="./media/img/react.png" height="150px" alt="reactjs" />
+            <h4>ReactJS</h4>
+          </div>
+          <div
+            class="col-xs-6 col-sm-3 p-3 text-center"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <img src="./media/img/redux.png" height="150px" alt="redux" />
+            <h4>Redux</h4>
+          </div>
+          <div
+            class="col-xs-6 col-sm-3 p-3 text-center"
+            data-aos="zoom-out"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <img src="./media/img/ajax.png" height="150px" alt="ajax" />
+            <h4>AJAX</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote2">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="textContainer">
+              <blockquote
+                class="blockquote text-center"
+                style="color: #f4f4f4 !important;"
+                data-aos="fade-down"
+                data-aos-delay="50"
+                data-aos-duration="1500"
+              >
+                <p>
+                  <strong>
+                    "Great websites promote you 24/7! No employee can ever do
+                    that.”
+                  </strong>
+                </p>
+                <footer
+                  class="blockquote-footer"
+                  data-aos="fade-up"
+                  data-aos-delay="80"
+                  data-aos-duration="2000"
+                >
+                  <cite title="Source Title">Paul Cookson</cite>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="timelineSection"
+      style="background-color: #333;"
+      id="timeLineSection"
+    >
+      <div class="container-fluid mt-5">
+        <div class="row text-center">
+          <div class="col-12 mt-5 mb-1 pt-5" style="color: #fff;">
+            <h1
+              data-aos="fade-down"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+            >
+              My Timeline
+            </h1>
+            <hr />
+          </div>
+        </div>
+
+        <section class="timeline">
+          <div class="container">
+            <div
+              class="timeline-item"
+              data-aos="fade-right"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+            >
+              <div class="timeline-img"></div>
+
+              <div class="timeline-content timeline-card">
+                <div class="date text-center">2018-Present</div>
+                <h3 class="text-center">Prodapt Solutions Pvt Ltd</h3>
+
+                <blockquote class="p-2">
+                  Started my career as a UI Developer at Prodapt Solutions Pvt
+                  Ltd on Jan, 2018. So far I have worked on 3 major projects
+                  with Prodapt's clients and 2 Freelance projects.
+                </blockquote>
+              </div>
+            </div>
+
+            <div
+              class="timeline-item"
+              data-aos="fade-left"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+            >
+              <div class="timeline-img"></div>
+
+              <div class="timeline-content timeline-card">
+                <div class="date text-center">2013-2017</div>
+                <h3 class="text-center">ITER, SOA Univeristy</h3>
+                <blockquote class="p-2">
+                  Completed my BTech - Bachelor of Technology focused in
+                  Electrical and Electronics Engineering from ITER, Siksha 'O'
+                  Anusandhan University.
+                  <p><strong>CGPA/Percentage(%): 8.0</strong></p>
+                </blockquote>
+              </div>
+            </div>
+
+            <div
+              class="timeline-item"
+              data-aos="fade-right"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+            >
+              <div class="timeline-img"></div>
+
+              <div class="timeline-content timeline-card">
+                <div class="date text-center">2011-2013</div>
+                <h3 class="text-center">Mother's Public School</h3>
+                <blockquote class="p-2">
+                  Completed my Higher Secondary Education in Science with IT
+                  from Mother's Public School, Bhubaneswar.
+                  <p><strong>CGPA/Percentage(%): 76.60%</strong></p>
+                </blockquote>
+              </div>
+            </div>
+
+            <div
+              class="timeline-item"
+              data-aos="fade-left"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+            >
+              <div class="timeline-img"></div>
+
+              <div class="timeline-content timeline-card">
+                <div class="date text-center">2001-2011</div>
+                <h3 class="text-center">St. Vincent's Convent School</h3>
+                <blockquote class="p-2">
+                  Completed my Schooling from St. Vincent's Convent School,
+                  Balasore.
+                  <p><strong>CGPA/Percentage(%): 88.50%</strong></p>
+                </blockquote>
+              </div>
+            </div>
+
+            <div
+              class="timeline-item"
+              data-aos="fade-right"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+            >
+              <div class="timeline-img"></div>
+
+              <div class="timeline-content timeline-card">
+                <div class="date text-center">10 JAN 1995</div>
+                <h3 class="text-center">Start Of My Journey</h3>
+                <blockquote class="p-2">
+                  I was born in Balasore, Odisha. I am a person who is positive
+                  about every aspect of life. There are many things I like to
+                  do, to see, to experience and my journey starts from here.
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="cvSection" id="resumeSection">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1
+              data-aos="fade-down"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+              style="text-shadow: 2px 2px 4px #333;"
+            >
+              My Resume
+            </h1>
+            <hr />
+            <button
+              class="btn btn-outline-dark"
+              style="
+                -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+              "
+            >
+              <a
+                href="./media/cv.pdf"
+                target="_blank"
+                style="
+                  text-decoration: none;
+                  color: #c4c4c4;
+                  font-weight: 500;
+                  text-shadow: 2px 2px 4px #000;
+                "
+                >Download</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="workSection py-5" style="background-color: #333;">
+      <div class="container-fluid">
+        <div class="row py-3">
+          <div class="col-12 text-center">
+            <h1
+              data-aos="fade-down"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+              style="text-shadow: 2px 2px 4px #000; color: #f4f4f4;"
+            >
+              View My Work
+            </h1>
+            <hr />
+          </div>
+        </div>
+        <div class="row p-5">
+          <div class="col text-center">
+            <button class="workButton p-3 mb-4">
+              <a
+                href="myWork.html"
+                target="_self"
+                style="text-decoration: none; color: #333; font-weight: bold;"
+              >
+                <span><i class="fas fa-angle-left fa-lg"></i></span>
+                Click Here /
+                <span>
+                  <i class="fas fa-angle-right fa-lg"></i>
+                </span>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contactSection py-5" id="contactMe">
+        <div class="container-fluid">
+          <div class="row py-3">
+            <div class="col-12 text-center pt-3">
+              <h1
+                data-aos="fade-down"
+                data-aos-delay="50"
+                data-aos-duration="1500"
+                style="text-shadow: 2px 2px 4px #000; color: #f4f4f4;"
+              >
+                Contact Me
+              </h1>
+              <hr />
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col"
+              data-aos="fade-right"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+            >
+              <h2 class="py-4">
+                Contact Info
+              </h2>
+              <p class="py-2 hoverAction">
+                <span>
+                  <i class="fas fa-map-marker-alt fa-lg"></i>
+                </span>
+                Bangalore, IN
+              </p>
+              <p class="py-2 hoverAction">
+                <span>
+                  <i class="fas fa-mobile-alt fa-lg"></i>
+                </span>
+                (+91) 9439844464
+              </p>
+              <p class="py-2 hoverAction">
+                <span>
+                  <i class="fab fa-whatsapp fa-lg"></i>
+                </span>
+                (+91) 9439844464
+              </p>
+              <p class="py-2 hoverAction">
+                <span>
+                  <i class="fas fa-envelope-open-text fa-lg"></i>
+                </span>
+                tathagat.mohanty95@gmail.com
+              </p>
+            </div>
+            <div
+              class="col"
+              data-aos="fade-left"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+            >
+              <h2 class="py-4">
+                Have a question or want to work together?
+              </h2>
+              <form
+                class="form-group"
+                target="_self"
+                onsubmit="return postToGoogle();"
+                action=""
+                autocomplete="off"
+              >
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="emailInput">E-MAIL</label>
+                    <input
+                      class="form-control"
+                      type="email"
+                      placeholder="Enter you email address"
+                      aria-describedby="emailHelp"
+                      id="emailInput"
+                      name="entry.1593728234"
+                    />
+                    <small id="emailHelp" class="form-text"
+                      >I'll never share your email with anyone else.</small
+                    >
+                  </div>
+                  <div class="col-md-6">
+                    <label for="nameInout">Name</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Enter Your Name"
+                      id="nameInput"
+                      name="entry.52375445"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <label for="messageInput">Message</label>
+                    <textarea
+                      class="form-control"
+                      id="messageInput"
+                      placeholder="Enter you message"
+                      rows="3"
+                      name="entry.259282163"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col py-3">
+                    <input
+                      type="submit"
+                      class="btn btn-dark"
+                      value="Send Message"
+                      style="
+                        -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+                        -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+                        box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+                      "
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="animatedTopButton">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col text-center" style="margin-top: -30px;">
+            <button
+              class="animatedTopButton btn-lg"
+              style="
+                -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+                background-color: #333;
+              "
+            >
+              <a href="#top" style="text-decoration: none; color: #fff;">
+                <i class="fas fa-angle-double-up fa-2x"></i>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="footer py-5"
+      style="background-color: #333; color: #fff; margin-top: -30px;"
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="footerLinks text-center pt-3">
+              <a
+                href="mailto:tathagat.mohanty95@gmail.com"
+                target="_blank"
+                style="color: #fff;"
+                class="px-3"
+              >
+                <i class="fas fa-envelope fa-2x"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mrmohanty"
+                target="_blank"
+                style="color: #fff;"
+                class="px-3"
+              >
+                <i class="fab fa-linkedin fa-2x"></i>
+              </a>
+              <a
+                href="https://github.com/jontycool"
+                target="_blank"
+                style="color: #fff;"
+                class="px-3"
+              >
+                <i class="fab fa-github-alt fa-2x"></i>
+              </a>
+              <a
+                href="https://www.twitter.com/tathagatmohant1"
+                target="_blank"
+                style="color: #fff;"
+                class="px-3"
+              >
+                <i class="fab fa-twitter fa-2x"></i>
+              </a>
+            </div>
+            <div class="copyright text-center mr-4">
+              &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              Developed By Tathagat Mohanty
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ----------------------------Scripts---------------------------- -->
+
+    <script src="./lib/jquery-3.5.1.min.js"></script>
+    <script src="./lib/bootstrap.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-
+    <script src="./lib/jquery.waypoints.min.js"></script>
+    <script src="./lib/jquery.counterup.min.js"></script>
+    <script src="./lib/typed.js"></script>
+    <script src="./lib/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script>
       var overlay = document.getElementById('preloader');
 
@@ -102,41 +929,222 @@
         overlay.style.display = 'none';
       });
     </script>
-
     <script>
-      var textWrapper = document.querySelector('.ml1 .letters');
-      textWrapper.innerHTML = textWrapper.textContent.replace(
-        /\S/g,
-        "<span class='letter'>$&</span>"
-      );
+      $(window).scroll(function () {
+        $('nav').toggleClass('scrolledDown', $(this).scrollTop() > 50);
+      });
+    </script>
+    <script>
+      var docWidth = document.documentElement.offsetWidth;
+
+      [].forEach.call(document.querySelectorAll('*'), function (el) {
+        if (el.offsetWidth > docWidth) {
+          console.log(el);
+        }
+      });
+    </script>
+    <script>
+      var typed = new Typed('.typedText', {
+        strings: ['Tathagat Mohanty', 'a UX/UI Developer'],
+        typeSpeed: 60,
+        startDelay: 50,
+        backSpeed: 60,
+        loop: true,
+      });
+    </script>
+    <script>
+      $('.counter').counterUp({
+        delay: 20,
+        time: 1500,
+      });
+    </script>
+    <script>
+      var ml4 = {};
+      ml4.opacityIn = [0, 1];
+      ml4.scaleIn = [0.2, 1];
+      ml4.scaleOut = 1.5;
+      ml4.durationIn = 800;
+      ml4.durationOut = 600;
+      ml4.delay = 500;
 
       anime
         .timeline({ loop: true })
         .add({
-          targets: '.ml1 .letter',
-          scale: [0.3, 1],
-          opacity: [0, 1],
-          translateZ: 0,
-          easing: 'easeOutExpo',
-          duration: 600,
-          delay: (el, i) => 70 * (i + 1),
+          targets: '.ml4 .letters-1',
+          opacity: ml4.opacityIn,
+          scale: ml4.scaleIn,
+          duration: ml4.durationIn,
         })
         .add({
-          targets: '.ml1 .line',
-          scaleX: [0, 1],
-          opacity: [0.5, 1],
-          easing: 'easeOutExpo',
-          duration: 700,
-          offset: '-=875',
-          delay: (el, i, l) => 80 * (l - i),
-        })
-        .add({
-          targets: '.ml1',
+          targets: '.ml4 .letters-1',
           opacity: 0,
-          duration: 1000,
-          easing: 'easeOutExpo',
-          delay: 1000,
+          scale: ml4.scaleOut,
+          duration: ml4.durationOut,
+          easing: 'easeInExpo',
+          delay: ml4.delay,
+        })
+        .add({
+          targets: '.ml4 .letters-2',
+          opacity: ml4.opacityIn,
+          scale: ml4.scaleIn,
+          duration: ml4.durationIn,
+        })
+        .add({
+          targets: '.ml4 .letters-2',
+          opacity: 0,
+          scale: ml4.scaleOut,
+          duration: ml4.durationOut,
+          easing: 'easeInExpo',
+          delay: ml4.delay,
+        })
+        .add({
+          targets: '.ml4 .letters-3',
+          opacity: ml4.opacityIn,
+          scale: ml4.scaleIn,
+          duration: ml4.durationIn,
+        })
+        .add({
+          targets: '.ml4 .letters-3',
+          opacity: 0,
+          scale: ml4.scaleOut,
+          duration: ml4.durationOut,
+          easing: 'easeInExpo',
+          delay: ml4.delay,
+        })
+        .add({
+          targets: '.ml4 .letters-4',
+          opacity: ml4.opacityIn,
+          scale: ml4.scaleIn,
+          duration: ml4.durationIn,
+        })
+        .add({
+          targets: '.ml4 .letters-4',
+          opacity: 0,
+          scale: ml4.scaleOut,
+          duration: ml4.durationOut,
+          easing: 'easeInExpo',
+          delay: ml4.delay,
+        })
+        .add({
+          targets: '.ml4 .letters-5',
+          opacity: ml4.opacityIn,
+          scale: ml4.scaleIn,
+          duration: ml4.durationIn,
+        })
+        .add({
+          targets: '.ml4 .letters-5',
+          opacity: 0,
+          scale: ml4.scaleOut,
+          duration: ml4.durationOut,
+          easing: 'easeInExpo',
+          delay: ml4.delay,
+        })
+        .add({
+          targets: '.ml4 .letters-6',
+          opacity: ml4.opacityIn,
+          scale: ml4.scaleIn,
+          duration: ml4.durationIn,
+        })
+        .add({
+          targets: '.ml4 .letters-6',
+          opacity: 0,
+          scale: ml4.scaleOut,
+          duration: ml4.durationOut,
+          easing: 'easeInExpo',
+          delay: ml4.delay,
+        })
+        .add({
+          targets: '.ml4 .letters-7',
+          opacity: ml4.opacityIn,
+          scale: ml4.scaleIn,
+          duration: ml4.durationIn,
+        })
+        .add({
+          targets: '.ml4 .letters-7',
+          opacity: 0,
+          scale: ml4.scaleOut,
+          duration: ml4.durationOut,
+          easing: 'easeInExpo',
+          delay: ml4.delay,
+        })
+        .add({
+          targets: '.ml4 .letters-8',
+          opacity: ml4.opacityIn,
+          scale: ml4.scaleIn,
+          duration: ml4.durationIn,
+        })
+        .add({
+          targets: '.ml4 .letters-8',
+          opacity: 0,
+          scale: ml4.scaleOut,
+          duration: ml4.durationOut,
+          easing: 'easeInExpo',
+          delay: ml4.delay,
+        })
+        .add({
+          targets: '.ml4',
+          opacity: 0,
+          duration: 500,
+          delay: 500,
         });
+    </script>
+    <script>
+      // Get the video
+      var video = document.getElementById('bgVideo');
+
+      // Get the button
+      var btn = document.getElementById('myBtn');
+
+      // Pause and play the video, and change the button text
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = 'Pause';
+        } else {
+          video.pause();
+          btn.innerHTML = 'Play';
+        }
+      }
+    </script>
+    <script>
+      function postToGoogle() {
+        var field1 = $('#emailInput').val();
+        var field2 = $('#nameInput').val();
+        var field3 = $('#messageInput').val();
+
+        if (field1 == '') {
+          alert('Please Enter Your Email');
+          document.getElementById('emailInput').focus();
+          return false;
+        }
+        if (field2 == '') {
+          alert('Please Enter Your Name');
+          document.getElementById('nameInput').focus();
+          return false;
+        }
+        if (field3 == '') {
+          alert('Please Add a Message');
+          document.getElementById('messageInput').focus();
+          return false;
+        }
+
+        $.ajax({
+          url:
+            'https://docs.google.com/forms/d/e/1FAIpQLSc6EVQr6EiOQ4mTi90SD-nJeYqCfNp-RNRfIEYuRIXI2g0jVA/formResponse?',
+          data: {
+            'entry.1593728234': field1,
+            'entry.52375445': field2,
+            'entry.259282163': field3,
+          },
+          type: 'POST',
+          dataType: 'xml',
+          success: function (d) {},
+          error: function (x, y, z) {
+            alert('Thanks! I will get back to you ASAP over email.');
+          },
+        });
+        return false;
+      }
     </script>
   </body>
 </html>
