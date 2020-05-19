@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      name="viewport"
+    />
+    <meta name="viewport" content="width=device-width" />
 
     <title>Tathagat's Portfolio</title>
     <meta name="description" content="Tathagat Mohanty" />
@@ -89,10 +94,12 @@
         <video autoplay loop id="bgVideo" poster="./media/bgVideoPoster.png">
           <source src="./media/bgVideo.mp4" type="video/mp4" />
         </video>
-        <div class="banner">
+        <div class="banner p-1">
           <div class="actualText">
-            <h1>Hi There !</h1>
-            <h1>I am <span class="typedText"></span></h1>
+            <div class="h1 display"><strong>Hi There !</strong></div>
+            <div class="h1">
+              <strong>I am <span class="typedText"></span></strong>
+            </div>
           </div>
         </div>
       </div>
@@ -132,7 +139,7 @@
             />
           </div>
           <div
-            class="col-sm-6 text-center"
+            class="col-sm-6 text-justify"
             data-aos="fade-left"
             data-aos-delay="50"
             data-aos-duration="2000"
@@ -212,7 +219,7 @@
                 <i class="fas fa-lightbulb fa-3x"></i>
               </span>
               <h3 class="p-2">UNIQUE IDEAS</h3>
-              <p>
+              <p class="text-left p-2">
                 Creative in nature and always eager to implement new things in
                 my design to improve User Experience. Highly passionate in
                 developing stunning webpages and enjoy bringing ideas to life in
@@ -231,7 +238,7 @@
                 <i class="fas fa-tachometer-alt fa-3x"></i>
               </span>
               <h3 class="p-2">Fast & Intuitive</h3>
-              <p>
+              <p class="text-left p-2">
                 Fast load times and lag free interaction are my highest
                 priority. Strong preference for easy to use, intuitive UX/UI.
               </p>
@@ -248,7 +255,7 @@
                 <i class="fas fa-mobile-alt fa-3x"></i>
               </span>
               <h3 class="p-2">RESPONSIVE DESIGN</h3>
-              <p>
+              <p class="text-left p-2">
                 Creating a website that looks and feels amazing on all kinds of
                 devices. With a Mobile-First approach all my webpages will run
                 as expected on devices of any screen size.
@@ -266,7 +273,7 @@
                 <i class="fas fa-hammer fa-3x"></i>
               </span>
               <h3 class="p-2">MODULARITY</h3>
-              <p>
+              <p class="text-left p-2">
                 Code Modularity is one of my top priority hence making it easy
                 to add features later as required.
               </p>
@@ -283,7 +290,7 @@
                 <i class="fas fa-pencil-ruler fa-3x"></i>
               </span>
               <h3 class="p-2">QUICK LEARNER</h3>
-              <p>
+              <p class="text-left p-2">
                 Skilled in HTML, CSS, Bootstrap, Javascript, ReactJS, Redux etc.
                 Open to use new libraries and frameworks for any project as per
                 requirement.
@@ -301,7 +308,7 @@
                 <i class="fas fa-clock fa-3x"></i>
               </span>
               <h3 class="p-2">DEPENDABLE</h3>
-              <p>
+              <p class="text-left p-2">
                 I take my work very seriously and strive to deliver on or before
                 the agreed timeline. I highly value time in my personal life as
                 well.
@@ -534,7 +541,7 @@
           <div class="container">
             <div
               class="timeline-item"
-              data-aos="fade-right"
+              data-aos="zoom-in"
               data-aos-delay="50"
               data-aos-duration="1000"
             >
@@ -554,7 +561,7 @@
 
             <div
               class="timeline-item"
-              data-aos="fade-left"
+              data-aos="zoom-in"
               data-aos-delay="50"
               data-aos-duration="1000"
             >
@@ -574,7 +581,7 @@
 
             <div
               class="timeline-item"
-              data-aos="fade-right"
+              data-aos="zoom-in"
               data-aos-delay="50"
               data-aos-duration="1000"
             >
@@ -593,7 +600,7 @@
 
             <div
               class="timeline-item"
-              data-aos="fade-left"
+              data-aos="zoom-in"
               data-aos-delay="50"
               data-aos-duration="1000"
             >
@@ -612,7 +619,7 @@
 
             <div
               class="timeline-item"
-              data-aos="fade-right"
+              data-aos="zoom-in"
               data-aos-delay="50"
               data-aos-duration="1000"
             >
@@ -762,7 +769,7 @@
               data-aos-duration="1500"
             >
               <h2 class="py-4">
-                Have a question or want to work together?
+                Have any Queries/Feedback or Want to work together?
               </h2>
               <form
                 class="form-group"
