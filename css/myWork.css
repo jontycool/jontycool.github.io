@@ -1,13 +1,40 @@
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
-
 body {
-  padding: 0;
-  margin: 0;
-  background-image: url('../media/img/bg.jpg');
-  background-size: auto;
-  color: #999;
-  text-align: center;
-  font-family: 'Fjalla One', sans-serif;
+  line-height: 1.7;
+  color: #f4f4f4;
+  background-color: #333;
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+a {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f4f4f4;
 }
 
 #preloader {
@@ -47,60 +74,136 @@ body {
   }
 }
 
-.ml1 {
-  font-weight: 900;
-  font-size: 3.5em;
+.site-section {
+  padding: 4.5em 0;
+}
+@media (min-width: 768px) {
+  .site-section {
+    padding: 6em 0;
+  }
+}
+.site-section.site-section-sm {
+  padding: 4em 0;
 }
 
-.ml1 .letter {
-  display: inline-block;
-  line-height: 1em;
-}
-
-.ml1 .text-wrapper {
+.site-section-heading {
+  font-size: 30px;
+  color: #dee2e6;
   position: relative;
-  display: inline-block;
-  padding-top: 0.1em;
-  padding-right: 0.05em;
-  padding-bottom: 0.15em;
 }
-
-.ml1 .line {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  height: 3px;
-  width: 100%;
-  background-color: #999;
-  transform-origin: 0 0;
-}
-
-.ml1 .line1 {
+.site-section-heading:before {
+  content: '';
+  left: 0%;
   top: 0;
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #bd1220;
 }
-.ml1 .line2 {
-  bottom: 0;
+.site-section-heading.text-center:before {
+  content: '';
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #bd1220;
 }
 
-.header {
-  font-weight: 300;
-  border-bottom: 1px solid #777;
-  display: inline-block;
-  margin: 3em 0 0 0;
-  width: 80%;
+.section-title .sub-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  color: #b3b3b3;
 }
 
-.svg_box {
-  margin: 1em 0 0 0;
-  width: 100%;
+.section-title .title {
+  font-size: 2.2rem;
 }
 
-svg {
-  width: 100%;
-  max-width: 260px;
+.jm-sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 7em;
+}
+
+.readmore {
+  position: relative;
+  padding-right: 20px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  font-weight: 900;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.readmore:after {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  position: absolute;
+  content: '\e5c8';
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-family: 'icomoon';
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.readmore:hover {
+  padding-right: 30px;
+}
+.readmore:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.testimonial {
+  padding: 30px;
+  color: #d7d7d7;
+  background-color: #5a5a5a;
+  -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  line-height: 1.7;
+  font-style: italic;
+}
+.testimonial .vcard figure {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50px;
+  flex: 0 0 50px;
+}
+.testimonial .vcard figure img {
+  border-radius: 50%;
+}
+.testimonial .vcard .vcard-text {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.testimonial .vcard .vcard-text .position {
+  color: #b3b3b3;
+}
+.testimonial strong {
+  font-weight: 400;
+  padding: 0.3rem 0;
+  color: grey;
+  background: #faf5bb;
 }
 
 .footerText {
   display: flex;
   flex-direction: column;
 }
+
+/* .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+} */
