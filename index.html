@@ -101,7 +101,7 @@
 
     <div class="homeSection" id="homeSection">
       <div class="video-container">
-        <video loop id="bgVideo" poster="./media/bgVideoPoster.png">
+        <video autoplay muted loop id="bgVideo" poster="./media/bgVideoPoster.png">
           <source src="./media/bgVideo.mp4" type="video/mp4" />
         </video>
         <div class="container-fluid">
@@ -1145,10 +1145,6 @@
           btn.innerHTML = 'Play';
         }
       }
-      window.onload = (event) => {
-        console.log('page is loaded');
-        document.getElementById('bgVideo').play();
-      };
     </script>
     <script>
       function postToGoogle() {
