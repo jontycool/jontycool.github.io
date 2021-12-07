@@ -1145,7 +1145,10 @@
           btn.innerHTML = 'Play';
         }
       }
-      myFunction();
+      window.onload(function() {
+          console.log("Page Loaded");
+          myFunction();
+      })
     </script>
     <script>
       function postToGoogle() {
