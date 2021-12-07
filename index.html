@@ -1145,10 +1145,10 @@
           btn.innerHTML = 'Play';
         }
       }
-      window.onload(function() {
-          console.log("Page Loaded");
-          document.getElementById('bgVideo').play();
-      })
+      window.onload = (event) => {
+        console.log('page is loaded');
+        document.getElementById('bgVideo').play();
+      };
     </script>
     <script>
       function postToGoogle() {
